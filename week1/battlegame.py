@@ -3,25 +3,6 @@
 from math import fabs
 import random
 
-# Creating variables for characters: Declared the three variables & I set each of their values to a String with their display name
-wizard = "Wizard"
-elf = "Elf"
-human = "Human"
-orc = "Orc"
-
-wizard_hp = 70
-elf_hp = 100
-human_hp = 150
-orc_hp = 200
-
-wizard_damage = 150
-elf_damage = 100
-human_damage = 20
-orc_damage = 125
-
-dragon_hp = 300
-dragon_damage = 50
-
 # Declaring functions
 def add_empty_line():
     print()
@@ -55,6 +36,24 @@ def dragon_attack_information(argument):
 # Starting the game
 play_game = True
 while play_game:
+    # Creating variables for characters: Declared the three variables & I set each of their values to a String with their display name
+    wizard = "Wizard"
+    elf = "Elf"
+    human = "Human"
+    orc = "Orc"
+
+    wizard_hp = 70
+    elf_hp = 100
+    human_hp = 150
+    orc_hp = 200
+
+    wizard_damage = 150
+    elf_damage = 100
+    human_damage = 20
+    orc_damage = 125
+
+    dragon_hp = 300
+    dragon_damage = 50
     while True:
         print("-----------------------------------")
         print("\nWelcome to the Fantasy BattleGame!")
@@ -66,28 +65,28 @@ while play_game:
         print("4) Orc")
         print("5) Exit")
         add_empty_line()
-        character = input("Choose your character: ")
-        if character == "1" or character == "Wizard":
+        player_option = input("Choose your character: ")
+        if player_option == "1" or player_option == "Wizard":
             character = wizard
             my_hp = wizard_hp
             my_damage = wizard_damage
             break
-        elif character == "2" or character == "Elf":
+        elif player_option == "2" or player_option == "Elf":
             character = elf
             my_hp = elf_hp
             my_damage = elf_damage
             break
-        elif character == "3" or character == "Human":
+        elif player_option == "3" or player_option == "Human":
             character = human
             my_hp = human_hp
             my_damage = human_damage
             break
-        elif character == "4" or character == "Orc":
+        elif player_option == "4" or player_option == "Orc":
             character = orc
             my_hp = orc_hp
             my_damage = orc_damage
             break
-        elif character == "5":
+        elif player_option == "5" or player_option == "Exit":
             quit()
         else:
             print("Unknown Character")
