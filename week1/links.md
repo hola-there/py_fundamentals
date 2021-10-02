@@ -30,3 +30,9 @@
 ---
 
 ## Install and Configure Software Tools
+### Windows Developer Tools (Git)
+* https://git-scm.com/downloads
+* https://git-scm.com/
+* https://www.atlassian.com/git/tutorials/git-bash
+### macOS Developer Tools (Git and more)
+* 
