@@ -17,3 +17,5 @@ print(max(1, 2, -5, 10, 0))
 print(min(1, 2, -5, 10, 0))
 # About this⮯ built-in:
 print(pow(2, 3))
+# About this⮯ built-in:
+print(round(51.6))
