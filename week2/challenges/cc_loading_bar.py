@@ -1,6 +1,10 @@
+# Name: Ola B.
+# Email: code@olab.dev
+# Challenge 3 of Week 2
 start = 0
 step = 5
 stop = 100 + step
+
 for amount_loaded in range(start, stop, step):
     if amount_loaded == 25:
         print("1/4 of the way there")
