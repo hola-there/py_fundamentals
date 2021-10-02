@@ -1,2 +1,2 @@
 # py_fundamentals
- Completing workshops for NuCamp Bootcamp
+Notes, code exercises, completed code challenges & workshops for NuCamp Bootcamp
