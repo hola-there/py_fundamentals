@@ -11,8 +11,12 @@ program_name = sys.argv[0]
 arguments = sys.argv[1:]
 count = len(arguments)
 
+# printing out all arguments
 for x in sys.argv:
     print("Argument: ", x)
+
+# printing out the value of a specific position of the fibonacci sequence
+# starting at 0 as the first position
 
 
 def rFib(n):
