@@ -9,6 +9,11 @@ print(abs_int)
 # About this⮯ built-in: https://www.geeksforgeeks.org/float-in-python/
 int_to_float = float(100)
 print(int_to_float)
+# About this⮯ built-in: https://www.w3resource.com/python/built-in-function/int.php
+print(int(1.23))
 # About this⮯ built-in:
-float_to_int = int(1.23)
-print(float_to_int)
+print(max(1, 2, -5, 10, 0))
+# About this⮯ built-in:
+print(min(1, 2, -5, 10, 0))
+# About this⮯ built-in:
+print(pow(2, 3))
