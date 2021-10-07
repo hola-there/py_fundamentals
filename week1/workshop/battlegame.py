@@ -1,5 +1,7 @@
-# Name: Ola Bamisaiye
-# Email: Code@olab.dev
+# Name: Ola B.
+# Email: code@olab.dev
+# Workshop #1 from Week 1
+
 from math import fabs
 import random
 
