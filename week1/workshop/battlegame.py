@@ -2,22 +2,26 @@
 # Email: code@olab.dev
 # Workshop #1 from Week 1
 
-from math import fabs
-import random
+# Obtaining any modules needed
+from math import fabs  # Source: https://www.w3schools.com/python/ref_math_fabs.asp
+import random  # Source: https://docs.python.org/3/library/random.html
 
 # Declaring functions
 
 
+# Helps print an empty new line
 def add_empty_line():
-    print()
+    print("")
 
 
+# Used to provide a random number between the specified range for this program
 def get_random_num():
     # Source for random function: https://docs.python.org/3/library/random.html#random.randint
     return random.randint(2, 7)
 
 
-def human_attack_information(argument):
+# Used python's setup for a case/switch statement for different/random character attack info
+def character_attack_information(argument):
     new_switcher = {
         1: "The " + str(character) + " meets a dragon & attacks with a quick blow",
         2: "The " + str(character) + " attempts to deal a fatal blow to the dragon",
@@ -29,6 +33,7 @@ def human_attack_information(argument):
     return new_switcher.get(argument, "The " + str(character) + " attacks the Dragon!")
 
 
+# Used python's setup for a case/switch statement for different/random dragon attack info
 def dragon_attack_information(argument):
     switcher = {
         1: "The dragon eyes the " + str(character) + ". Makes it somersault and then looks on with hunger & anger in it's eye",
@@ -76,27 +81,27 @@ while play_game:
         print("5) Exit")
         add_empty_line()
         player_option = input("Choose your character: ")
-        if player_option == "1" or player_option == "Wizard":
+        if player_option == "1" or player_option.lower() == "wizard":
             character = wizard
             my_hp = wizard_hp
             my_damage = wizard_damage
             break
-        elif player_option == "2" or player_option == "Elf":
+        elif player_option == "2" or player_option.lower() == "elf":
             character = elf
             my_hp = elf_hp
             my_damage = elf_damage
             break
-        elif player_option == "3" or player_option == "Human":
+        elif player_option == "3" or player_option.lower() == "human":
             character = human
             my_hp = human_hp
             my_damage = human_damage
             break
-        elif player_option == "4" or player_option == "Orc":
+        elif player_option == "4" or player_option.lower() == "orc":
             character = orc
             my_hp = orc_hp
             my_damage = orc_damage
             break
-        elif player_option == "5" or player_option == "Exit":
+        elif player_option == "5" or player_option.lower() == "exit":
             quit()
         else:
             print("Unknown Character")
@@ -104,7 +109,7 @@ while play_game:
     # Source: https://stackoverflow.com/questions/15286401/print-multiple-arguments-in-python
     print("You have chosen the character: " + str(character) +
           "\nHealth: " + str(my_hp) + "\nDamage: " + str(my_damage))
-    print("\n" + human_attack_information(1))
+    print("\n" + character_attack_information(1))
     dragon_hp -= my_damage
     print("The dragon's hit points are now: " + str(dragon_hp) + "\n")
     print("" + dragon_attack_information(1))
@@ -114,7 +119,7 @@ while play_game:
     # Source: https://pythonguides.com/increment-and-decrement-operators-in-python/#:~:text=loop%20multiple%20conditions-,Python%20decrement%20operator,-Let%20us%20understand
     # The character and dragon continue atacking one another until one is defeated
     while True:
-        print("" + human_attack_information(get_random_num()))
+        print("" + character_attack_information(get_random_num()))
         dragon_hp -= my_damage
         print("The dragon's hit points are now: " + str(dragon_hp) + "\n")
         if dragon_hp <= 0:
