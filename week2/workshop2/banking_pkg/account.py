@@ -20,7 +20,6 @@ def withdraw(user):
         print("Not enough funds to withdraw from...")
         return "no change"
     else:
-        print(str(type(user.balance - modifier)))
         return float(user.balance - modifier)
 
 
