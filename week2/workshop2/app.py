@@ -4,7 +4,7 @@
 
 # Class for bank users created
 class User:
-    def __init__(name, pin, balance):
+    def __init__(self, name, pin, balance):
         self.name = name
         self.pin = pin
         self.balence = balance
