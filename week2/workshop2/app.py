@@ -2,20 +2,24 @@
 # Email: code@olab.dev
 # Main program for Workshop #2 from Week 2
 
+from banking_pkg import account
+
+
 # Class for bank users created
 class User:
     def __init__(self, name, pin, balance):
         self.name = name
         self.pin = pin
-        self.balence = balance
+        self.balance = balance
 
 
 # Creating starting values
-new_user = User("empty", "empty", "empty")
+new_user = ""
 registered_users = []
 login_boolean = True
 check_passed = False
 current_user = ""
+leave_menu = False
 # Helper functions created
 
 
@@ -40,6 +44,7 @@ def register():
     balance = 0
     global new_user
     new_user = User(name, pin, balance)
+    registered_users.append(new_user)
     print(new_user.name +
           " has been registered with a starting balance of $" + str(new_user.balance))
 
@@ -80,11 +85,31 @@ def atm_menu(user_object):
     print("| 3.    Withdraw    | 4.    Logout       |")
     print("------------------------------------------")
     option = input("Choose an option: ")
+    if int(option) == 1 or str(option.lower()) == "balance":
+        print("Your current balance is: " +
+              str(account.show_balance(user_object)))
+    elif int(option) == 2 or str(option.lower()) == "deposit":
+        tmp_account_change = account.deposit(user_object)
+        user_object.balance = tmp_account_change
+        print("Your current balance is now: " +
+              str(account.show_balance(user_object)))
+    elif int(option) == 3 or str(option.lower()) == "withdraw":
+        tmp_account_change = account.withdraw(user_object)
+        if "float" in str(type(tmp_account_change)):
+            user_object.balance = tmp_account_change
+            print("Your current balance is now: " +
+                  str(account.show_balance(user_object)))
+    elif int(option) == 4 or str(option.lower()) == "logout":
+        account.logout(user_object)
+        global leave_menu
+        leave_menu = True
+    else:
+        print("Invaild option please try again")
 
 
 # The program actually beings user interaction!
 register()
 while login_boolean:
     login()
-while check_passed:
+while check_passed == True and leave_menu == False:
     atm_menu(current_user)
