@@ -36,17 +36,49 @@ def automated_teller_machine_print():
 
 # Important functions created
 
+# Checks the account pin to pass a required registration check
+def pin_check():
+    pin_check_passed = False
+    while pin_check_passed == False:
+        pin = input("Enter PIN: ")
+        if ((len(pin)) > 4) and pin.isnumeric():
+            print("PIN contains more than 4 numbers")
+            print("PIN must contain 4 numbers")
+        elif len(pin) < 4 and pin.isnumeric():
+            print("PIN contains less than 4 numbers")
+            print("PIN must contain 4 numbers")
+        elif not pin.isnumeric():
+            print("PIN must contain 4 numbers")
+        else:
+            pin_check_passed == True
+            return pin
+            # Checks name to pass certain requirements for registration
+
+
+def name_check():
+    name_check_passed = False
+    while name_check_passed == False:
+        name = input("Enter name to register: ")
+        if len(name) < 10 and len(name) > 1:
+            name_check_passed = True
+            return name
+        elif len(name) == 0:
+            print("You must enter a name.")
+        else:
+            print("Valid names are between 1 to 10 Characters long")
+
+
 # Handles the registration of new users
 def register():
     automated_teller_machine_print()
-    name = input("Enter name to register: ")
-    pin = input("Enter PIN: ")
+    name = name_check()
+    pin = pin_check()
     balance = 0
     global new_user
     new_user = User(name, pin, balance)
     registered_users.append(new_user)
-    print(new_user.name +
-          " has been registered with a starting balance of $" + str(new_user.balance))
+    print(new_user.name + " has been registered with a starting balance of $" +
+          str(new_user.balance))
 
 
 # Handles the login for registered users
