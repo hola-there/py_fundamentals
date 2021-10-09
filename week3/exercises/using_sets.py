@@ -14,5 +14,5 @@ empty_set = set()
 
 # numbers_set = {1, 2, 3, 4, 4} # duplicate values removed
 # numbers_set = {1, 2, 3, 4, [5, 6]}  # cannot use mutable data types in a set
-numbers_set = {1, 2, 3, 4, (5, 6)}
-print(numbers_set)
+# numbers_set = {1, 2, 3, 4, (5, 6)}  # tuples are immutable so this is a okay
+# print(numbers_set)
