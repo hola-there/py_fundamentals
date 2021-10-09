@@ -11,3 +11,6 @@
 
 # Creating an empty set
 empty_set = set()
+
+numbers_set = {1, 2, 3, 4, 4}
+print(numbers_set)
