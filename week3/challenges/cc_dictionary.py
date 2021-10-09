@@ -1,6 +1,6 @@
 # Name: Ola B.
 # Email: code@olab.dev
-# Challenge 2 of Week 3
+# Challenge 3 of Week 3
 
 # Declarations
 continue_collecting_snowfall_records = True
@@ -39,18 +39,20 @@ def record_inches(day_passed, dict_passed, update):
                 "Invalid option for inches that fell has been passed. Please pass a number")
 
 
+# Iterate through the dictionary in order to list all entries
 def print_current_records(dict_passed):
     for day, record in dict_passed.items():
         print(record, " inches on ", day)
 
 
+# Updates a preexisting key-value pair
 def update_record(day_passed, dict_passed):
     record_inches(day_passed, dict_passed, True)
     print(str(day_passed) + " has been updated to " +
           str(dict_passed[str(day_passed)]) + " inches")
 
 
-# Going to append a new key-value pair to a passed dictionary
+# Going to list all key-value pairs or append or modify a key-value pair in a passed dictionary
 def new_snowfall_record(dict_to_pass):
     day_isnt_valid = True
     while day_isnt_valid:
