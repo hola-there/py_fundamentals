@@ -2,8 +2,11 @@
 # Email: code@olab.dev
 # Exercise 3 of Week 3
 
-my_string = "alpha"
+MY_STRING = "alpha"
 '''multiline_string = """bravo
 charlie"""
 print(my_string)
 print(multiline_string)'''
+
+print(MY_STRING[0])
+print(MY_STRING[3])
