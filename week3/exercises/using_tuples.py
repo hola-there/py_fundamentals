@@ -9,4 +9,6 @@ my_tuple = (1, 2, 3, 4, 5)
 print(my_tuple[-1] + my_tuple[-2])  # add last two numbers in the tuple
 
 # Modifying a tuple
-my_tuple[3] = 1
+# my_tuple[3] = 1  # cannot do this, tuples are immutable
+my_tuple = (5, 4, 3, 2, 1)
+print(my_tuple)
