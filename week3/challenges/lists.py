@@ -6,7 +6,6 @@ import random
 
 diamonds = ["AD", "2D", "3D", "4D", "5D",
             "6D", "7D", "8D", "9D", "10D", "JD", "QD", "KD"]
-
 player_hand = []
 
 
@@ -17,6 +16,7 @@ def get_new_hand():
     diamonds.pop(random_card)
 
 
+# prints out an update of the list provided as an argument
 def print_deck(deck_name, deck):
     print("The contents of '" + str(deck_name) + "' is: " + str(deck))
 
