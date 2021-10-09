@@ -1,6 +1,6 @@
 # Name: Ola B.
 # Email: code@olab.dev
-# Exercise 11 of Week 3
+# Exercise 1 of Week 3
 
 # Creating a list; note the use of commas & the []s
 states = ["Washington", "Oregon", "California"]
