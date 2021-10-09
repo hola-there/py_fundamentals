@@ -17,3 +17,6 @@ print(MY_STRING[0:3])
 print(MY_STRING[:2])
 print(MY_STRING[2:])
 print(MY_STRING)
+
+for char in MY_STRING:
+    print(char)
