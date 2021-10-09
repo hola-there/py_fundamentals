@@ -38,6 +38,9 @@ def record_inches(day_passed, dict_passed, update):
             print(
                 "Invalid option for inches that fell has been passed. Please pass a number")
 
+# Maybe a cool thing to finish another day: sort by day of week or by record snowfall num
+# def sort_records(dict_passed):
+
 
 # Iterate through the dictionary in order to list all entries
 def print_current_records(dict_passed):
