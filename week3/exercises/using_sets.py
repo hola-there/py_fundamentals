@@ -21,8 +21,15 @@ empty_set = set()
 # accessing set values
 words_set = {"Alpha", "Bravo", "Charlie"}
 
-abcd = ""
+# part 1 of accessing set values
+'''abcd = ""
 for word in words_set:
     abcd += word
 # sets are unordered so the order of the items aren't set. different values per run
-print(abcd)
+print(abcd)'''
+
+# part 2 of accessing set values
+if "Alpha" in words_set:
+    print("Alpha is in set")
+else:
+    print("Alpha not in set")
