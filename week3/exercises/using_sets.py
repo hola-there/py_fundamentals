@@ -29,7 +29,13 @@ for word in words_set:
 print(abcd)'''
 
 # part 2 of accessing set values
-if "Alpha" in words_set:
+'''if "Alpha" in words_set:
     print("Alpha is in set")
 else:
-    print("Alpha not in set")
+    print("Alpha not in set")'''
+
+# modifying set values
+words_set.add("Delta")
+print(words_set)
+words_set.discard("Bravo")
+print(words_set)
