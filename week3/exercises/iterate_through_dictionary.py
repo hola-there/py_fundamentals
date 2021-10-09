@@ -11,5 +11,15 @@ state_capitals = {"Washington": "Olympia",
     print(state)'''
 
 # Iterating through values in the dictionary
-for city in state_capitals.values():
-    print(city)
+'''for city in state_capitals.values():
+    print(city)'''
+
+# Iterating through both keys and values with bracket notation
+for state in state_capitals:
+    print(state_capitals[state], "is the capital of", state)
+
+print()
+
+# Iterating through both keys and values with dict itmes
+for state, city in state_capitals.items():
+    print(city, "is the capital of", state)
