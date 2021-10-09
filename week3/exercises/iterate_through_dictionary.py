@@ -6,6 +6,10 @@
 state_capitals = {"Washington": "Olympia",
                   "Oregon": "Salem", "California": "Sacramento"}
 
-# Iterating through the dictionary
-for state in state_capitals:
-    print(state)
+# Iterating through keys the dictionary
+'''for state in state_capitals:
+    print(state)'''
+
+# Iterating through values in the dictionary
+for city in state_capitals.values():
+    print(city)
