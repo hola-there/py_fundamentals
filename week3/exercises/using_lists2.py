@@ -18,3 +18,8 @@ for state in states:
 print("Washington" in states)
 print("Tennessee" in states)
 print("Washington" not in states)
+
+# Combining lists together (Concatenation)
+states2 = ["Arizona", "Ohio", "Lousisana", "Maryland"]
+best_states = states + states2
+print(best_states)
