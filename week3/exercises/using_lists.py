@@ -22,3 +22,6 @@ states[2] = "Arizona"
 # Testing out List methods (functions that are tied to an object)
 states.append("New York")
 print(states)
+
+states.pop()
+print(states)
