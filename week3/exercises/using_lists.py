@@ -20,8 +20,15 @@ states[2] = "Arizona"
 # print(len(states))
 
 # Testing out List methods (functions that are tied to an object)
+
+# Adding an item to a list with the append list method
 states.append("New York")
 print(states)
 
+# Removing the last item to a list with the pop list method
 states.pop()
+print(states)
+
+# Removing a list item from a specific index
+states.pop(1)
 print(states)
