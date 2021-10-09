@@ -17,4 +17,8 @@ states[2] = "Arizona"
 # print(states)
 
 # Finding the length of a list
-print(len(states))
+# print(len(states))
+
+# Testing out List methods (functions that are tied to an object)
+states.append("New York")
+print(states)
