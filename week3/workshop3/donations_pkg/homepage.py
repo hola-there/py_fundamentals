@@ -27,10 +27,17 @@ def show_homepage():
 
 
 def donate(authorized_user_passed):
-    donation_amt = float(input("Enter amount to donate: "))
-    donation = str(authorized_user_passed) + " donated $" + str(donation_amt)
-    print("Thank you for your donation!")
-    return donation
+    donation_amt = input("Enter amount to donate: ")
+    if donation_amt.isnumeric():
+        if float(donation_amt) <= 0:
+            return "Please enter a donation amount greater than 0"
+        else:
+            donation = str(authorized_user_passed) + \
+                " donated $" + str(donation_amt)
+            print("Thank you for your donation!")
+            return donation
+    else:
+        return "Please enter a valid donation amount"
 
 
 def show_donations(donations_passed):
@@ -38,5 +45,10 @@ def show_donations(donations_passed):
     if len(donations_passed) == 0:
         print("Currently, there are no donations.")
     else:
+        total_donation = 0.0
         for x in donations_passed:
             print(x)
+            location_of_money_sign = x.find('$')
+            float_from_donation = x[(location_of_money_sign + 1):]
+            total_donation += float(float_from_donation)
+        print("Donation Total: $", total_donation)

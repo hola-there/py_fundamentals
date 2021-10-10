@@ -44,12 +44,15 @@ def homepage_option_selection():
     elif (choice.isnumeric() and int(choice) == 2) or choice.lower() == "register":
         username = input("\nPlease enter your account's username: ")
         password = input("Please enter your account's password: ")
-        authorized_user = register(database, username)
+        authorized_user = register(database, username, password)
         can_register(database, username, password)
     elif (choice.isnumeric() and int(choice) == 3) or choice.lower() == "donate":
         if login_check(True):
             donation = donate(authorized_user)
-            donations.append(donation)
+            if "donated" in donation:
+                donations.append(donation)
+            else:
+                print(donation)
     elif (choice.isnumeric() and int(choice) == 4) or choice.lower() == "show donations":
         show_donations(donations)
     elif (choice.isnumeric() and int(choice) == 5) or choice.lower() == "exit":
