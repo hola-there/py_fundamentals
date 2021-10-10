@@ -28,6 +28,15 @@ def show_homepage():
 
 def donate(authorized_user_passed):
     donation_amt = float(input("Enter amount to donate: "))
-    donation = authorized_user_passed, "donated $", donation_amt
+    donation = str(authorized_user_passed) + " donated $" + str(donation_amt)
     print("Thank you for your donation!")
     return donation
+
+
+def show_donations(donations_passed):
+    print("\n--- All Donations ---")
+    if len(donations_passed) == 0:
+        print("Currently, there are no donations.")
+    else:
+        for x in donations_passed:
+            print(x)

@@ -2,7 +2,7 @@
 # Email: code@olab.dev
 # Main program for Workshop #3 from Week 3
 
-from donations_pkg.homepage import show_homepage, donate
+from donations_pkg.homepage import show_homepage, donate, show_donations
 from donations_pkg.user import login, register
 
 # Declaring variables
@@ -35,6 +35,7 @@ def can_register(database_passed, username_passed, password_passed):
 def homepage_option_selection():
     login_check(False)
     global authorized_user
+    global donations
     choice = input("Choose and Option: ")
     if (choice.isnumeric() and int(choice) == 1) or choice.lower() == "login":
         username = input("\nPlease enter your account's username: ")
@@ -50,7 +51,7 @@ def homepage_option_selection():
             donation = donate(authorized_user)
             donations.append(donation)
     elif (choice.isnumeric() and int(choice) == 4) or choice.lower() == "show donations":
-        print("TODO: Write Show Donations Functionality")
+        show_donations(donations)
     elif (choice.isnumeric() and int(choice) == 5) or choice.lower() == "exit":
         print("Goodbye...exiting now")
         global run_donations
