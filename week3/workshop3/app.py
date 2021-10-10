@@ -2,7 +2,7 @@
 # Email: code@olab.dev
 # Main program for Workshop #3 from Week 3
 
-from donations_pkg.homepage import show_homepage
+from donations_pkg.homepage import show_homepage, donate
 from donations_pkg.user import login, register
 
 # Declaring variables
@@ -13,9 +13,14 @@ run_donations = True
 
 
 # Determines if the login worked
-def login_check():
-    if authorized_user == "":
+def login_check(donate_check):
+    if authorized_user == "" and donate_check == False:
         print("You must be logged in to donate.\n")
+    elif donate_check == True and authorized_user == "":
+        print("You are not logged in.")
+        return False
+    elif donate_check == True:
+        return True
     else:
         print("Logged in as:", authorized_user, "\n")
 
@@ -28,7 +33,7 @@ def can_register(database_passed, username_passed, password_passed):
 
 # user is presented with options
 def homepage_option_selection():
-    login_check()
+    login_check(False)
     global authorized_user
     choice = input("Choose and Option: ")
     if (choice.isnumeric() and int(choice) == 1) or choice.lower() == "login":
@@ -41,7 +46,9 @@ def homepage_option_selection():
         authorized_user = register(database, username)
         can_register(database, username, password)
     elif (choice.isnumeric() and int(choice) == 3) or choice.lower() == "donate":
-        print("TODO: Write Donate Functionality")
+        if login_check(True):
+            donation = donate(authorized_user)
+            donations.append(donation)
     elif (choice.isnumeric() and int(choice) == 4) or choice.lower() == "show donations":
         print("TODO: Write Show Donations Functionality")
     elif (choice.isnumeric() and int(choice) == 5) or choice.lower() == "exit":

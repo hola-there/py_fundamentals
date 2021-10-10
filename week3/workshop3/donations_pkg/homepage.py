@@ -24,3 +24,10 @@ def show_homepage():
     print("------------------------------------------")
     print("|                 5.  Exit               |")
     print("------------------------------------------")
+
+
+def donate(authorized_user_passed):
+    donation_amt = float(input("Enter amount to donate: "))
+    donation = authorized_user_passed, "donated $", donation_amt
+    print("Thank you for your donation!")
+    return donation
