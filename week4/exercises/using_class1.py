@@ -1,6 +1,6 @@
 # Name: Ola B.
 # Email: code@olab.dev
-# Challenge 1 of Week 4
+# Exercise 1 of Week 4
 
 '''
 # Capitalize the first letter of an object name in python
